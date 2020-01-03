@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="./css/work.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/shop.ico" type="image/x-icon">
+    <title>書店資訊</title>
+    <style>
+      .navbar{
+    box-shadow: 5px 5px 5px #888888;
+            }
+      body{
+         background: linear-gradient(#ACBB78,#F7F8F8); 
+        font-family: 'Noto Sans TC','Baloo Bhai', cursive;
+      }
+      .carousel{
+        margin-top: 10px;
+        height:500px;
+      }
+      h2{
+        text-shadow: 3px 3px 3px #888888;
+        color:	#0088A8;
+      }
+      .card{
+        box-shadow: 5px 5px 5px #888888;
+      }
+      h5{
+        color:	#008866;
+        text-align:center;
+      }
+
+      #view{
+        position:relative;
+        top:60px;
+        margin-bottom: 50px;
+        box-shadow: 3px 3px 3px #888888;
+      }
+      #view, #footer, #part, #part1, #part2{
+          display:none;
+      }
+      #loading{
+        height: 100vh;
+        position: fixed;
+        z-index: 999;
+  
+    }
+     #footer{
+       margin-top: 15px;
+     }
+    </style>
+</head>
+<body>
+ 
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" style="font-size:20px;" href="index.html">My Book Store</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav navbar-right">
+      <li class="nav-item active">
+        <a class="nav-link" href="event.html">首頁 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main.php">書店資訊</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="msg.html">連絡我們</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<div class="container-fluid" id="loading">
+  <div class="row h-100">
+      <div class="col-12 align-self-center text-center">
+          <img src="./images/gear.svg" alt="">
+          <p class="text-dark">Loading...</p>
+      </div>
+  </div>
+</div>
+
+<div class="container" id="view">
+    <div class="row pulse wow">
+        <div class="col-12">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/boo3.jpg" class="d-block w-100 object-fit">
+              </div>
+              <div class="carousel-item">
+                <img src="./images//book1.png" class="d-block w-100 object-fit">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/book2.jpg" class="d-block w-100 object-fit">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/book3.jpg" class="d-block w-100 object-fit">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="part">
+  <div class="row slideInLeft wow">
+    <div class="col-12 my-3">
+      <h2>新書快訊:</h2>
+      <hr class="bg-black">
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        
+        <div class="card-body">
+          <img src="./images/book5.jpg" class="card-img-top object-fit">
+          <h5 class="card-title"  data-title>歲月靜好:蔣勳日常功課</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;蔣勳</p>
+          <p class="card-text" data-txt>我在節氣裡做救贖自己的日常功課。
+            合十敬慎，為眾生祈福——歲月靜好</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;79折，NT:356$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:450$</p>
+          <span data-img="book5.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book6.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>在名為未來的波浪裡</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;原子邦妮</p>
+          <p class="card-text" data-txt>巧遇~人生總有停不下來的
+                                   巧遇~遇上了　就記住了
+                                  今天巧遇彩虹，並與它合影</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;79折，NT:356$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:450$</p>
+          <span data-img="book6.jpg"></span>
+              <button class="btn btn-link">
+                <i class="fas fa-align-justify"></i> 詳細資料
+             </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book7.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>原來如此! 日本名勝景點趣聞物語</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;李仁毅</p>
+          <p class="card-text" data-txt>外行看熱鬧，內行看門道，去日本玩不再「知其然卻不知其所以然」！</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;79折，NT:277$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:450$</p>
+          <span data-img="book7.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book8.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>男型就行</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;駱思安</p>
+          <p class="card-text" data-txt>是一本男性形象穿搭「工具書」而非看帥哥照片的「故事書」</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;85折，NT:578$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:680$</p>
+          <span data-img="book8.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="part1">
+  <div class="row slideInRight wow">
+    <div class="col-12 my-3">
+      <h2>兒童新書:</h2>
+      <hr class="bg-black">
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book9.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>坐在世界的一角</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;布蘭登.溫佐</p>
+          <p class="card-text" data-txt>在你的世界，有沒有一個地方
+            不曾因為時空的轉換而消失，
+            並屹立不搖的存在著⋯⋯</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;79折，NT:356$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:450$</p>
+            <span data-img="book9.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book10.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>我是狗</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;白希那</p>
+          <p class="card-text" data-txt>複合式創作媒材，展現擬真敘事風格
+            傾力盛開出人與動物間最純最真的美好</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;79折，NT:253$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:450$</p>
+            <span data-img="book10.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book11.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>魔法糖果</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;白希那</p>
+          <p class="card-text" data-txt>用心傾聽和溝通，你會發現原來自己一點也不孤單，愛，一直都在……</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;NT:253$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:450$</p>
+          <span data-img="book11.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book12.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>最美的禮物</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;郝廣才</p>
+          <p class="card-text" data-txt>一個媽媽送給孩子最動人、最有力量的禮物，
+            祝福孩子體認生命的價值和美的高度，成為心靈最美麗的人。</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;9折，NT:225$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:250$</p>
+            <span data-img="book12.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="part2">
+  <div class="row slideInUp wow">
+    <div class="col-12 my-3">
+      <h2>雜誌&生活資訊:</h2>
+      <hr class="bg-black">
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book13.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title"data-title>科學少年, 一月</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;出版社:遠流出版社</p>
+          <p class="card-text" data-txt>AI早已是現代大眾琅琅上口的名詞，但卻說得出、摸不著，它到底是什麼？對人類又有何影響？</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;9折，NT:270$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT: 300$</p>
+          <span data-img="book13.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book14.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>小丑 (UHD+BD限定版)</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;陶德菲利普斯</p>
+          <p class="card-text" data-txt>在社會無視的情況下，佛萊克開始慢慢陷入瘋狂，一步一步成為高譚市最邪惡的超級罪犯-小丑。</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;英文</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;NT:1,280$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:1,280$ &nbsp;特價商品，不再折扣 </p>
+          <span data-img="book14.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book16.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>這樣喝咖啡才健康</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;出版社:大樂文化出版社</p>
+          <p class="card-text" data-txt>許多人每天喝咖啡，有人說喝多傷身，也有人說越喝越健康，甚至只要方法正確，懷孕、生病都能喝，哪一種說法是正確的呢？</p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;中文/繁體</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;NT:129$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:129$ &nbsp;特價商品，不再折扣</p>
+          <span data-img="book16.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card world" style="width: 16rem;">
+        <img src="./images/book15.jpg" class="card-img-top object-fit">
+        <div class="card-body">
+          <h5 class="card-title" data-title>Midi Pile: Une Aventure De Jacominus Gainsborough</h5>
+          <p class="card-text" style="display:none;" data-art>&nbsp;Rebeca Dautremer</p>
+          <p class="card-text" data-txt>跟著兔子家米可的步伐走一趟精緻的風景之旅，歷練一趟又期待又不安的表白心路。 </p>
+          <p class="card-text" style="display:none;" data-lang>&nbsp;法文</p>
+          <p class="card-text" style="display:none;" data-price>&nbsp;NT:1,990$</p>
+          <p class="card-text" style="display:none;" data-price2>&nbsp;NT:2,230$</p>
+          <span data-img="book15.jpg"></span>
+            <button class="btn btn-link">
+              <i class="fas fa-align-justify"></i> 詳細資料
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid bg-secondary text-white text-center" id="footer">
+            <div class="row">
+                <div class="col-12 my-3">
+                       
+                    <h6>&copy;<script>document.write(new Date().getFullYear())</script>&nbsp;泰&nbsp;山&nbsp;網&nbsp;頁&nbsp;班&nbsp;製&nbsp;作</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" role="dialog" id="modal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">詳細資訊</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="" style="width:400px;height:400px;"><!--在彈出視窗裡面放圖片-->
+                <h6 >
+                  <i class="fas fa-book text-success"></i> 書名:
+                  <span></span>
+                </h6>
+                <h6 >
+                  <i class="fas fa-user text-success"></i> 作者:
+                  <span></span>
+                </h6>
+                <h6>
+                   <i class="fas fa-map-signs text-info"></i> 簡介:<br>
+                   <span></span>
+                </h6>
+                <h6>
+                  <i class="fas fa-language text-info"></i> 語言:
+                  <span></span>
+               </h6>
+                <h6>
+                  <i class="fas fa-hand-holding-usd text-success"></i> 售價:
+                  <span></span>
+               </h6>
+               <h6>
+                <i class="fas fa-hand-holding-usd text-danger"></i> 定價:
+                <span></span>
+             </h6>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap4.min.js"></script>
+    <script src="./js/wow.min.js"></script>
+
+    <script>
+      $(".world button").on("click",function(){
+            let title = $(this).closest("div").find("h5").text()
+            $("#modal .modal-body").find("h6").eq(0).find("span").text(title)
+
+            let art = $(this).closest("div").find("p").eq(0).text()
+            $("#modal .modal-body").find("h6").eq(1).find("span").text(art)
+
+            let text = $(this).closest("div").find("p").eq(1).text()
+            $("#modal .modal-body").find("h6").eq(2).find("span").text(text)
+
+            let language = $(this).closest("div").find("p").eq(2).text()
+            $("#modal .modal-body").find("h6").eq(3).find("span").text(language)
+
+            let price = $(this).closest("div").find("p").eq(3).text()
+            $("#modal .modal-body").find("h6").eq(4).find("span").text(price)
+
+            let price2 = $(this).closest("div").find("p").eq(4).text()
+            $("#modal .modal-body").find("h6").eq(5).find("span").text(price2)
+
+            
+
+            let img = $(this).closest("div").find("span").attr("data-img")//當點擊按鈕出現modal時，會抓取td裡面的data-img這個屬性
+            $("#modal .modal-body img").attr("src","./images/" + img)//去修改modal裡的屬性改成images裡的圖片
+
+            $("#modal").modal("show")
+        })
+    </script>
+
+  <script>
+    $(window).on('load', function(){
+        $("#loading").fadeOut(2000,function(){
+            $("#view").fadeIn();
+            $("#footer").fadeIn(); 
+            $("#part").fadeIn(); 
+            $("#part1").fadeIn(); 
+            $("#part2").fadeIn(); 
+            new WOW().init()
+        })
+    })
+
+</script>
+</body>
+</html>

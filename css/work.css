@@ -1,0 +1,41 @@
+.object-fit{/*讓圖片比例不會跑掉*/
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 768px){/*手機版面*/
+    .table td{/*顯示區塊*/
+        display:block;
+             }
+    .table tr{/*顯示區塊並給他框線*/
+        display:block;
+        border:1px solid black;
+    }       
+    .table thead{/*當手機模式時，我讓表頭不要顯示*/
+        display:none;
+    }
+    .table tbody td:before{
+        content: attr(data-th) ": ";
+        color: var(--primary);
+        font-weight: bold;
+    }
+  }
+
+  .carousel-item{
+    height:500px;
+}
+
+.carousel-caption{/*輪播圖片底下的文字，都0的狀況下會自動拉長延展*/
+    left:   0;
+    right:  0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+
+}
+
+.card-img-top{
+    height: 220px;
+}
+
+
+

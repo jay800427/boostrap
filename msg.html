@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首頁</title>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/work.css">
+  <link rel="stylesheet" href="./css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./images/msg.ico" type="image/x-icon">
+  <style>
+    body{
+      background: linear-gradient(#ACBB78,#F7F8F8);
+      font-family: 'Noto Sans TC','Baloo Bhai', cursive;
+    }
+    .navbar{
+    box-shadow: 5px 5px 5px #888888;
+            }
+    h3{
+        color:	#0088A8;
+        text-shadow: 3px 3px 3px #888888;
+      }
+ 
+    #footer, #part, #part1, #part2{
+          display:none;
+      }
+    #loading{
+        height: 100vh;
+        position: fixed;
+        z-index: 999;
+  
+    }
+  </style>
+</head>
+
+<body>
+    
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" style="font-size:20px;" href="index.html">My Book Store</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav navbar-right">
+      <li class="nav-item">
+        <a class="nav-link" href="event.html">首頁 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="main.php">書店資訊</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="msg.html">連絡我們</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<div class="container" id="part">
+    <div class="row">
+            <div class="col-12 my-3">
+                
+                <hr class="bg-black">
+            </div>
+  </div>
+</div>
+<div class="container-fluid" id="loading">
+  <div class="row h-100">
+      <div class="col-12 align-self-center text-center">
+          <img src="./images/gear.svg" alt="">
+          <p class="text-dark">Loading...</p>
+      </div>
+  </div>
+</div>
+
+<div class="container" id="part1">
+    <div class="row">
+        <div class="col-12 my-3">
+            <h1 class="text-center">連絡我們</h1>
+            <h3 class="text-center">
+                親愛的會員及網友您好，若您有任何意見或疑問，我們誠摯地邀請您直接寄到我們專人服務的電子郵件信箱，或撥打免付費售後服務專線： 0800-095-446。我們將盡力為您解答！
+                為了加速來信處理時間，請在底下欄位填入正確的選項。感謝您的配合！</h3>
+            <hr class="bg-white">
+        </div>
+    </div>
+</div>
+
+    <div class="container" id="part2">
+      <div class="row rotateInDownLeft wow">
+        <div class="col-4 my-3">
+        <form id="order">
+            <div class="form-group">
+                  <label for="inputPassword3">訪客名稱:</label>
+                  <input type="text" class="form-control" name="name" id="inputPassword3" placeholder="customer">
+              </div>
+            <div class="form-group"> 
+                <label for="inputEmail3">Email:</label>
+                <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3">手機/電話:</label>
+                <input type="text" class="form-control" name="phone" id="inputPassword3" placeholder="number">
+            </div>
+            <div class="form-group"> 
+                  <label for="inputPassword3">地址:</label>
+                  <input type="text" class="form-control" name="addr" id="inputPassword3" placeholder="Address">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">留言板:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="msg" rows="5"></textarea>
+              </div>
+            <div class="form-group">
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                   以上資訊確認無誤的話，請勾選
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">確認送出</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-8 my-3">
+           <div>
+             <img src="./map.svg" alt="">
+           </div>
+        </div>
+      </div> 
+    </div> 
+
+
+  <div class="container-fluid bg-secondary text-white text-center" id="footer">
+            <div class="row">
+                <div class="col-12">
+                        <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                  <a class="nav-link text-white" href="#"><i class="fab fa-facebook-square"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-white" href="#"><i class="fab fa-twitter-square"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-white" href="#"><i class="fab fa-line"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-white" href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                              </ul>
+                    <h6>&copy;<script>document.write(new Date().getFullYear())</script>&nbsp;泰&nbsp;山&nbsp;網&nbsp;頁&nbsp;班&nbsp;製&nbsp;作</h6>
+                </div>
+            </div>
+        </div>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery.dataTables.min.js"></script>
+  <script src="./js/dataTables.bootstrap4.min.js"></script>
+  <script src="./js/jquery.validate.min.js"></script>
+  <script src="./js/sweetalert2@9.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="./js/particles.min.js"></script>
+
+  <script>
+ $("#order").validate({
+                //驗證規則
+                rules:{
+                    email:{
+                        required:true,
+                        email:true
+                          },
+                    addr:{
+                        required:true,
+                        minlength:5
+                         },
+                    name:{
+                        required:true,
+                        minlength:2
+                         },
+                    phone:{
+                        required:true,
+                        minlength:10
+                         },
+                    msg:{
+                        required:true,
+                        minlength:30
+                         },
+                    accept:{
+                        required:true,
+                          }
+                      },
+
+         messages:{ /*把驗證訊息弄成中文訊息(預設是英文)*/
+                    email:{
+                        required: '這是必填欄位',
+                        email:'請輸入正確的電子信箱'
+                    },
+                    addr:{
+                        required: '這是必填欄位',
+                        minlength: '請輸入至少五個字'
+                    },
+                    name:{
+                        required: '這是必填欄位',
+                        minlength: '請輸入至少兩個字'
+                    },
+                    phone:{
+                        required: '這是必填欄位',
+                        minlength: '請輸入至少8~10個數字'
+                    },
+                    msg:{
+                        required: '這是必填欄位',
+                        minlength: '請輸入至少30個文字'
+                    },
+                    accept:{
+                        required: '請同意訂購規定'
+                    }
+                },
+                 //驗證錯誤時，element 代表錯的input
+                 highlight: function(element){
+                     $(element).removeClass("is-valid").addClass("is-invalid")
+                 },
+                 //錯誤訊息的位置，element 代表錯的input , error 代表錯誤訊息的 label  
+                 errorPlacement: function(error, element){
+                     error.insertAfter(element).addClass("text-danger");
+                 },
+                 //驗證成功，element 代表錯誤訊息的label
+                 success: function(element){
+                     $(element).siblings("input").removeClass("is-invalid").addClass("is-valid");
+                     $(element).remove();
+                 },
+
+                 submitHandler: function(form){  
+                     Swal.fire({
+                         icon: "question",
+                         title: "確認",
+                         text: "上述資訊如果確認無誤的話，請點選確認",
+                         //顯示取消按鈕
+                         showCancelButton: true,
+                         //不使用預設樣式
+                         buttonsStyling: false,
+                         //自訂按鈕class
+                         customClass:{
+                            confirmButton: "btn btn-success mx-1",
+                            cancelButton: "btn btn-danger mx-1"
+                         },
+                         confirmButtonText:"確認",
+                         cancelButtonText:"取消"
+                     }).then(function(result){
+                         //使用者點確認按鈕
+                         if(result.value){
+                            Swal.fire({
+                             icon: "success",
+                             title: "成功",
+                             text: "資訊已送出，謝謝你的光臨",
+                         //顯示取消按鈕
+                         showCancelButton: true,
+                         buttonsStyling: false,
+                         customClass:{
+                            confirmButton: "btn btn-success mx-1",
+                            cancelButton: "btn btn-danger mx-1"
+                         },
+                         confirmButtonText:"確認",
+                         cancelButtonText:"取消"
+                                     })
+                          }
+                    })
+                 }
+            })
+    </script>
+
+<script>
+  $(window).on('load', function(){
+      $("#loading").fadeOut(2000,function(){
+          $("#footer").fadeIn(); 
+          $("#part").fadeIn(); 
+          $("#part1").fadeIn(); 
+          $("#part2").fadeIn(); 
+          new WOW().init()
+      })
+  })
+
+</script>
+
+
+
+</body>
+
+</html>
